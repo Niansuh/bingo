@@ -56,20 +56,20 @@ export function Settings() {
       <Dialog open onOpenChange={() => setLoc('')} modal>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>Set up your user information</DialogTitle>
+            <DialogTitle>设置你的用户信息</DialogTitle>
             <DialogDescription>
-              Please use Edge browser
+              请使用 Edge 浏览器
               <ExternalLink
                 href="https://www.bing.com"
               >
                 打开并登录 Bing
               </ExternalLink>
-              ，and then open it again
-              <ExternalLink href="https://www.bing.com/turing/captcha/challenge">Challenge interface</ExternalLink>
-              Right click >Inspect. Open the developer tools, find the Challenge interface in the network, right-click and copy, copy it as cURL (bash), paste it here, and save it.
+              ，然后再打开
+              <ExternalLink href="https://www.bing.com/turing/captcha/challenge">Challenge 接口</ExternalLink>
+              右键 》检查。打开开发者工具，在网络里面找到 Challenge 接口 》右键复制》复制为 cURL(bash)，粘贴到此处，然后保存。
               <div className="h-2" />
-              Graphic and text examples：
-              <ExternalLink href="https://github.com/Niansuh/bingo#如何获取-bing_header">How to get BING_HEADER</ExternalLink>
+              图文示例：
+              <ExternalLink href="https://github.com/weaigc/bingo#如何获取-bing_header">如何获取 BING_HEADER</ExternalLink>
             </DialogDescription>
           </DialogHeader>
           <div className="flex gap-4">
@@ -92,7 +92,7 @@ export function Settings() {
                 className={`${imageOnly ? 'translate-x-6' : 'translate-x-1'} inline-block h-4 w-4 transform rounded-full bg-white transition`}
               />
             </Switch>
-            Identity information is only used for drawing (recommended to turn on)
+            身份信息仅用于画图（推荐开启）
           </div>
 
           <div className="flex gap-2">
