@@ -69,7 +69,7 @@ export function UserMenu() {
             }
             className="cursor-pointer"
           >
-           Advanced settings
+           Voice settings
           </DropdownMenuItem>
           <DropdownMenuSeparator />
           <DropdownMenuItem
