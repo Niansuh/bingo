@@ -77,7 +77,7 @@ export function Settings() {
           </div>
           <Input
             value={curlValue}
-            placeholder="在此填写用户信息，格式: curl 'https://www.bing.com/turing/captcha/challenge' ..."
+            placeholder="Fill in user information here, format: curl 'https://www.bing.com/turing/captcha/challenge' ..."
             onChange={e => {
               setCurlValue(e.target.value)
             }}
@@ -92,7 +92,7 @@ export function Settings() {
                 className={`${imageOnly ? 'translate-x-6' : 'translate-x-1'} inline-block h-4 w-4 transform rounded-full bg-white transition`}
               />
             </Switch>
-            身份信息仅用于画图（推荐开启）
+            Identity information is only used for drawing (recommended to turn on)
           </div>
 
           <div className="flex gap-2">
@@ -105,15 +105,15 @@ export function Settings() {
                 className={`${enabledHistory ? 'translate-x-6' : 'translate-x-1'} inline-block h-4 w-4 transform rounded-full bg-white transition`}
               />
             </Switch>
-            启用历史记录
+            Enable history
           </div>
 
           <Button variant="ghost" className="bg-[#F5F5F5] hover:bg-[#F2F2F2]" onClick={() => copyToClipboard(btoa(curlValue))}>
-            转成 BING_HEADER 并复制
+            Convert to BING_HEADER and copy
           </Button>
 
           <Button variant="ghost" className="bg-[#F5F5F5] hover:bg-[#F2F2F2]" onClick={() => copyToClipboard(parseHeadersFromCurl(curlValue).cookie)}>
-            获取 BING_COOKIE 并复制
+            Get BING_COOKIE and copy
           </Button>
 
           <DialogFooter className="items-center">
@@ -143,7 +143,7 @@ export function Settings() {
                 }, 2000)
               }}
             >
-              保存
+              Keep
             </Button>
           </DialogFooter>
         </DialogContent>
