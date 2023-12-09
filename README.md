@@ -6,15 +6,11 @@ Bingo, a new Bing that makes you breathe easier。
 
 It highly restores the main operations of the New Bing web version, is available in China, is compatible with most Microsoft Bing AI functions, and can be deployed and used by yourself.
 
-![Github stars](https://badgen.net/github/stars/weaigc/bingo?icon=github&label=stars)
-![Gthub issues](https://img.shields.io/github/issues/weaigc/bingo)
-[![docker build](https://github.com/weaigc/bingo/actions/workflows/docker.yml/badge.svg)](https://hub.docker.com/repository/docker/weaigc/bingo/)
-[![docker hub](https://badgen.net/docker/size/weaigc/bingo?icon=docker&label=image%20size)](https://hub.docker.com/repository/docker/weaigc/bingo/)
-[![MIT License](https://img.shields.io/badge/license-MIT-97c50f)](https://github.com/weaigc/bingo/blob/main/license)
+![Github stars](https://badgen.net/github/stars/Niansuh/bingo?icon=github&label=stars)
 
 </div>
 
-## 演示站点
+## Demo site
 
 Site 1 (V2): https://bing.github1s.tk
 
