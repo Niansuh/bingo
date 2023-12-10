@@ -136,7 +136,7 @@ export function Settings() {
                 }
                 setCookie('IMAGE_ONLY', RegExp.$1 === 'cn' || imageOnly || !headerValue ? '1' : '0')
 
-                toast.success('保存成功')
+                toast.success('Saved successfully')
                 setLoc('')
                 setTimeout(() => {
                   location.href = './'
@@ -158,7 +158,7 @@ export function Settings() {
             <Button
               variant="primary"
               onClick={() => {
-                toast.success('保存成功')
+                toast.success('Saved successfully')
                 setLoc('')
                 setTimeout(() => {
                   location.href = './'
