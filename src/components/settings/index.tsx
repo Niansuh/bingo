@@ -56,19 +56,19 @@ export function Settings() {
       <Dialog open onOpenChange={() => setLoc('')} modal>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>设置你的用户信息</DialogTitle>
+            <DialogTitle>Set up your user information</DialogTitle>
             <DialogDescription>
-              请使用 Edge 浏览器
+              Please use Edge browser
               <ExternalLink
                 href="https://www.bing.com"
               >
-                打开并登录 Bing
+               Open and sign in to Bing
               </ExternalLink>
-              ，然后再打开
+              , and then open
               <ExternalLink href="https://www.bing.com/turing/captcha/challenge">Challenge 接口</ExternalLink>
               右键 》检查。打开开发者工具，在网络里面找到 Challenge 接口 》右键复制》复制为 cURL(bash)，粘贴到此处，然后保存。
               <div className="h-2" />
-              图文示例：
+              Graphic and text examples：
               <ExternalLink href="https://github.com/weaigc/bingo#如何获取-bing_header">如何获取 BING_HEADER</ExternalLink>
             </DialogDescription>
           </DialogHeader>
@@ -92,7 +92,7 @@ export function Settings() {
                 className={`${imageOnly ? 'translate-x-6' : 'translate-x-1'} inline-block h-4 w-4 transform rounded-full bg-white transition`}
               />
             </Switch>
-            身份信息仅用于画图（推荐开启）
+            Identity information is only used for drawing (recommended to turn on)
           </div>
 
           <div className="flex gap-2">
@@ -105,15 +105,15 @@ export function Settings() {
                 className={`${enabledHistory ? 'translate-x-6' : 'translate-x-1'} inline-block h-4 w-4 transform rounded-full bg-white transition`}
               />
             </Switch>
-            启用历史记录
+            Enable history
           </div>
 
           <Button variant="ghost" className="bg-[#F5F5F5] hover:bg-[#F2F2F2]" onClick={() => copyToClipboard(btoa(curlValue))}>
-            转成 BING_HEADER 并复制
+            Convert to BING_HEADER and copy
           </Button>
 
           <Button variant="ghost" className="bg-[#F5F5F5] hover:bg-[#F2F2F2]" onClick={() => copyToClipboard(parseHeadersFromCurl(curlValue).cookie)}>
-            获取 BING_COOKIE 并复制
+            Convert to BING_COOKIE and copy
           </Button>
 
           <DialogFooter className="items-center">
@@ -143,7 +143,7 @@ export function Settings() {
                 }, 2000)
               }}
             >
-              保存
+              Keep
             </Button>
           </DialogFooter>
         </DialogContent>
@@ -165,7 +165,7 @@ export function Settings() {
                 }, 2000)
               }}
             >
-              保存
+              Keep
             </Button>
           </DialogFooter>
         </DialogContent>
