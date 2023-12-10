@@ -39,7 +39,7 @@ export function Settings() {
         headerValue = atob(headerValue)
       } catch (e) { }
       if (!/^\s*curl ['"]https:\/\/www\.bing\.com\/turing\/captcha\/challenge['"]/.test(headerValue)) {
-        toast.error('用户信息格式不正确')
+        toast.error('User information format is incorrect')
         return
       }
       setImageOnly(checked)
@@ -62,14 +62,14 @@ export function Settings() {
               <ExternalLink
                 href="https://www.bing.com"
               >
-               Open and sign in to Bing
+                Open and sign in to Bing
               </ExternalLink>
-              , and then open
+              ，然后再打开
               <ExternalLink href="https://www.bing.com/turing/captcha/challenge">Challenge interface</ExternalLink>
-              Right click >Inspect. Open the developer tools, find the Challenge interface in the network, right-click and copy, copy it as cURL (bash), paste it here, and save it.
+              右键 》检查。打开开发者工具，在网络里面找到 Challenge 接口 》右键复制》复制为 cURL(bash)，粘贴到此处，然后保存。
               <div className="h-2" />
               Graphic and text examples：
-              <ExternalLink href="https://github.com/Niansuh/bingo/tree/main?tab=readme-ov-file#how-to-get-bing_header">How to get BING_HEADER</ExternalLink>
+              <ExternalLink href="https://github.com/weaigc/bingo#如何获取-bing_header">How to get BING_HEADER</ExternalLink>
             </DialogDescription>
           </DialogHeader>
           <div className="flex gap-4">
@@ -113,7 +113,7 @@ export function Settings() {
           </Button>
 
           <Button variant="ghost" className="bg-[#F5F5F5] hover:bg-[#F2F2F2]" onClick={() => copyToClipboard(parseHeadersFromCurl(curlValue).cookie)}>
-            Convert to BING_COOKIE and copy
+           Convert to BING_COOKIE and copy
           </Button>
 
           <DialogFooter className="items-center">
