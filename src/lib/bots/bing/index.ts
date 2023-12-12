@@ -250,7 +250,7 @@ export class BingWebBot {
     }
 
     if (!resp?.result) {
-      throw new ChatError('你的 VPS 或代理可能被封禁，如有疑问，请前往 https://github.com/weaigc/bingo 咨询', ErrorCode.BING_IP_FORBIDDEN)
+      throw new ChatError('Your VPS or proxy may be banned. If you have any questions, please go to https://github.com/Niansuh/bingo for consultation', ErrorCode.BING_IP_FORBIDDEN)
     }
 
     const { value, message } = resp.result || {}
