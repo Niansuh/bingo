@@ -35,7 +35,7 @@ export function ChatSuggestions({ setInput, suggestions = [] }: ChatSuggestionsP
   return currentSuggestions?.length ? (
     <div className="py-6">
       <div className="suggestion-items">
-        <button className="rai-button" type="button" aria-label="这是什么?" onClick={toggleSuggestions}>
+        <button className="rai-button" type="button" aria-label="What's this?" onClick={toggleSuggestions}>
           <SVG alt="help" src={currentSuggestions === helpSuggestions ? DismissFillIcon : HelpIcon} width={24} />
         </button>
         {
