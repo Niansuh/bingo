@@ -85,7 +85,7 @@ export function AdvancedSetting() {
                                 as="span"
                                 className={`w-full ${checked ? 'text-sky-100' : 'text-gray-500'}`}
                               >
-                                {checked && prompt.label === '自定义' ?
+                                {checked && prompt.label === 'Customize' ?
                                 <Textarea placeholder="Leave blank for original version New Bing" onChange={(event) => handleChangePrompt(event.target.value)} value={systemPrompt || prompt.content} /> : <span>{prompt.desc}</span>
                                 }
                               </RadioGroup.Description>
