@@ -12,13 +12,9 @@ It highly restores the main operations of the New Bing web version, is available
 
 ## Demo site
 
-Site 1 (V2): https://bing.github1s.tk
+Site 1 (V1): https://niansuh-bingo.hf.space/
 
-Site 2(V1): https://copilot.github1s.tk
-
-Site 3 (Agent): https://bingo.weaigc.repl.co (This mode is no longer recommended)
-
-[![img](./docs/images/demo.png)](https://bing.github1s.tk)
+[![img](./docs/images/demo.png)](https://niansuh-bingo.hf.space/)
 
 ## Functions and Features
 
@@ -81,7 +77,7 @@ When the previous methods cannot be used, you can use the proxy mode, then resol
 <summary>
 <del>The following are the banned deployment methods</del>
 
-The V2 version has solved this problem. For details, please see: https://github.com/weaigc/bingo/tree/v2
+The V2 version has solved this problem. For details, please see: https://github.com/Niansuh/bingo/tree/v2
 </summary>
 
 #### Deploy to HuggingFace
@@ -92,12 +88,12 @@ The V2 version has solved this problem. For details, please see: https://github.
 
 
 #### Deploy to Netlify
-[![Deploy to Netlify Button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github .com/weaigc/bingo)
+[![Deploy to Netlify Button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github .com/Niansuh/bingo)
 
 #### Deploy to Vercel
 If you are a paid Vercel user, you can click the link below to deploy to Vercel with one click. The free version has [interface timeout limit](https://vercel.com/docs/concepts/limits/overview), which is not recommended.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?demo-title=bingo&demo-description=bingo&demo-url=https%3A%2F% 2Fbing.github1s.tk%2F&project-name=bingo&repository-name=bingo&repository-url=https%3A%2F%2Fgithub.com%2Fweaigc%2Fbingo&from=templates&skippable-integrations=1&env=BING_HEADER&envDescription=%E5%A6%82%E6%9E %9C%E4%B8%8D%E7%9F%A5%E9%81%93%E6%80%8E%E4%B9%88%E9%85%8D%E7%BD%AE%E8%AF%B7 %E7%82%B9%E5%8F%B3%E4%BE%A7Learn+More&envLink=https%3A%2F%2Fgithub.com%2Fweaigc%2Fbingo%2Fblob%2Fmain%2F.env.example)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?demo-title=bingo&demo-description=bingo&demo-url=https%3A%2F% 2Fbing.github1s.tk%2F&project-name=bingo&repository-name=bingo&repository-url=https%3A%2F%2Fgithub.com%2FNiansuh%2Fbingo&from=templates&skippable-integrations=1&env=BING_HEADER&envDescription=%E5%A6%82%E6%9E %9C%E4%B8%8D%E7%9F%A5%E9%81%93%E6%80%8E%E4%B9%88%E9%85%8D%E7%BD%AE%E8%AF%B7 %E7%82%B9%E5%8F%B3%E4%BE%A7Learn+More&envLink=https%3A%2F%2Fgithub.com%2FNiansuh%2Fbingo%2Fblob%2Fmain%2F.env.example)
 
 </details>
 
@@ -114,7 +110,7 @@ If you are a paid Vercel user, you can click the link below to deploy to Vercel 
 * Start using Node
 
 ```bash
-git clone https://github.com/weaigc/bingo.git
+git clone https://github.com/Niansuh/bingo.git
 npm i
 cd bingo
 npm run build
