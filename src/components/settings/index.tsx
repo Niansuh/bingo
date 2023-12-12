@@ -1,8 +1,8 @@
-import { useCallback, useEffect, useState } from 'react';
-import { useAtom } from 'jotai';
-import { toast } from 'react-hot-toast';
-import { Switch } from '@headlessui/react';
-import { hashAtom, historyAtom, isImageOnly } from '@/state';
+import { useCallback, useEffect, useState } from 'react'
+import { useAtom } from 'jotai'
+import { toast } from 'react-hot-toast'
+import { Switch } from '@headlessui/react'
+import { hashAtom, historyAtom, isImageOnly } from '@/state'
 import {
   Dialog,
   DialogContent,
@@ -10,46 +10,46 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle
-} from '@/components/ui/dialog';
-import { Button } from '../ui/button';
-import { Input } from '../ui/input';
-import { ChunkKeys, parseCookies, extraCurlFromCookie, parseHeadersFromCurl, encodeHeadersToCookie, setCookie, resetCookies } from '@/lib/utils';
-import { ExternalLink } from '../external-link';
-import { useCopyToClipboard } from '@/lib/hooks/use-copy-to-clipboard';
-import { VoiceSetting } from './voice';
-import { AdvancedSetting } from './advanced';
+} from '@/components/ui/dialog'
+import { Button } from '../ui/button'
+import { Input } from '../ui/input'
+import { ChunkKeys, parseCookies, extraCurlFromCookie, parseHeadersFromCurl, encodeHeadersToCookie, setCookie, resetCookies } from '@/lib/utils'
+import { ExternalLink } from '../external-link'
+import { useCopyToClipboard } from '@/lib/hooks/use-copy-to-clipboard'
+import { VoiceSetting } from './voice'
+import { AdvancedSetting } from './advanced'
 
 export function Settings() {
-  const { isCopied, copyToClipboard } = useCopyToClipboard({ timeout: 2000 });
-  const [loc, setLoc] = useAtom(hashAtom);
-  const [curlValue, setCurlValue] = useState(extraCurlFromCookie(parseCookies(document.cookie, ChunkKeys)));
-  const [imageOnly, setImageOnly] = useState(isImageOnly);
-  const [enabledHistory, setHistory] = useAtom(historyAtom);
+  const { isCopied, copyToClipboard } = useCopyToClipboard({ timeout: 2000 })
+  const [loc, setLoc] = useAtom(hashAtom)
+  const [curlValue, setCurlValue] = useState(extraCurlFromCookie(parseCookies(document.cookie, ChunkKeys)))
+  const [imageOnly, setImageOnly] = useState(isImageOnly)
+  const [enabledHistory, setHistory] = useAtom(historyAtom)
 
   useEffect(() => {
     if (isCopied) {
-      toast.success('Copied successfully');
+      toast.success('Copied successfully')
     }
-  }, [isCopied]);
+  }, [isCopied])
 
   const handleSwitchImageOnly = useCallback((checked: boolean) => {
-    let headerValue = curlValue;
+    let headerValue = curlValue
     if (headerValue) {
       try {
-        headerValue = atob(headerValue);
-      } catch (e) {}
+        headerValue = atob(headerValue)
+      } catch (e) { }
       if (!/^\s*curl ['"]https:\/\/www\.bing\.com\/turing\/captcha\/challenge['"]/.test(headerValue)) {
-        toast.error('User information format is incorrect');
-        return;
+        toast.error('User information format is incorrect')
+        return
       }
-      setImageOnly(checked);
+      setImageOnly(checked)
     } else {
-      setImageOnly(checked);
+      setImageOnly(checked)
     }
     if (checked) {
-      setHistory(false);
+      setHistory(false)
     }
-  }, [curlValue]);
+  }, [curlValue])
 
   if (loc === 'settings') {
     return (
@@ -59,23 +59,27 @@ export function Settings() {
             <DialogTitle>Set up your user information</DialogTitle>
             <DialogDescription>
               Please use Edge browser
-              <ExternalLink href="https://www.bing.com">
+              <ExternalLink
+                href="https://www.bing.com"
+              >
                 Open and sign in to Bing
               </ExternalLink>
               ，and then open it again
               <ExternalLink href="https://www.bing.com/turing/captcha/challenge">Challenge interface</ExternalLink>
-              Right-click > Inspect. Open the developer tools, find the Challenge interface in the network > Right-click copy > Copy as cURL(bash), paste it here, and then save.
+              右键 》检查。打开开发者工具，在网络里面找到 Challenge 接口 》右键复制》复制为 cURL(bash)，粘贴到此处，然后保存。
               <div className="h-2" />
-              Graphic and text examples:
-              <ExternalLink href="https://github.com/Niansuh/bingo#how-to-get-bing_header">How to get BING_HEADER</ExternalLink>
+              Graphic and text examples：
+              <ExternalLink href="https://github.com/weaigc/bingo#如何获取-bing_header">How to get BING_HEADER</ExternalLink>
             </DialogDescription>
           </DialogHeader>
-          <div className="flex gap-4"></div>
+          <div className="flex gap-4">
+
+          </div>
           <Input
             value={curlValue}
-            placeholder="Fill in user information here, format: curl 'https://www.bing.com/turing/captcha/challenge' ..."
-            onChange={(e) => {
-              setCurlValue(e.target.value);
+            placeholder="在此填写用户信息，格式: curl 'https://www.bing.com/turing/captcha/challenge' ..."
+            onChange={e => {
+              setCurlValue(e.target.value)
             }}
           />
           <div className="flex gap-2">
@@ -104,20 +108,12 @@ export function Settings() {
             Enable history
           </div>
 
-          <Button
-            variant="ghost"
-            className="bg-[#F5F5F5] hover:bg-[#F2F2F2]"
-            onClick={() => copyToClipboard(btoa(curlValue))}
-          >
+          <Button variant="ghost" className="bg-[#F5F5F5] hover:bg-[#F2F2F2]" onClick={() => copyToClipboard(btoa(curlValue))}>
             Convert to BING_HEADER and copy
           </Button>
 
-          <Button
-            variant="ghost"
-            className="bg-[#F5F5F5] hover:bg-[#F2F2F2]"
-            onClick={() => copyToClipboard(parseHeadersFromCurl(curlValue).cookie)}
-          >
-            Convert to BING_COOKIE and copy
+          <Button variant="ghost" className="bg-[#F5F5F5] hover:bg-[#F2F2F2]" onClick={() => copyToClipboard(parseHeadersFromCurl(curlValue).cookie)}>
+           Convert to BING_COOKIE and copy
           </Button>
 
           <DialogFooter className="items-center">
@@ -125,26 +121,26 @@ export function Settings() {
               variant="secondary"
               className="bg-[#c7f3ff] hover:bg-[#fdc7ff]"
               onClick={() => {
-                let headerValue = curlValue;
+                let headerValue = curlValue
                 if (headerValue) {
                   try {
-                    headerValue = atob(headerValue);
-                  } catch (e) {}
+                    headerValue = atob(headerValue)
+                  } catch (e) { }
                   if (!/^\s*curl ['"]https:\/\/(www|cn)\.bing\.com\/turing\/captcha\/challenge['"]/.test(headerValue)) {
-                    toast.error('User information format is incorrect');
-                    return;
+                    toast.error('用户信息格式不正确')
+                    return
                   }
-                  encodeHeadersToCookie(headerValue).forEach((cookie) => setCookie(cookie));
+                  encodeHeadersToCookie(headerValue).forEach(cookie => setCookie(cookie))
                 } else {
-                  resetCookies();
+                  resetCookies()
                 }
-                setCookie('IMAGE_ONLY', RegExp.$1 === 'cn' || imageOnly || !headerValue ? '1' : '0');
+                setCookie('IMAGE_ONLY', RegExp.$1 === 'cn' || imageOnly || !headerValue ? '1' : '0')
 
-                toast.success('Saved successfully');
-                setLoc('');
+                toast.success('Saved successfully')
+                setLoc('')
                 setTimeout(() => {
-                  location.href = './';
-                }, 2000);
+                  location.href = './'
+                }, 2000)
               }}
             >
               Keep
@@ -152,21 +148,21 @@ export function Settings() {
           </DialogFooter>
         </DialogContent>
       </Dialog>
-    );
+    )
   } else if (['voice', 'advanced'].includes(loc)) {
     return (
       <Dialog open onOpenChange={() => setLoc('')} modal>
         <DialogContent>
-          {loc === 'voice' ? <VoiceSetting /> : <AdvancedSetting />}
+          { loc === 'voice' ? <VoiceSetting /> : <AdvancedSetting /> }
           <DialogFooter className="items-center">
             <Button
               variant="primary"
               onClick={() => {
-                toast.success('Saved successfully');
-                setLoc('');
+                toast.success('Saved successfully')
+                setLoc('')
                 setTimeout(() => {
-                  location.href = './';
-                }, 2000);
+                  location.href = './'
+                }, 2000)
               }}
             >
               Keep
@@ -174,7 +170,7 @@ export function Settings() {
           </DialogFooter>
         </DialogContent>
       </Dialog>
-    );
+    )
   }
-  return null;
+  return null
 }
