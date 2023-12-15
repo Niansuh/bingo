@@ -127,7 +127,7 @@ export function ChatImage({ children, uploadImage }: React.PropsWithChildren<Cha
       <div className={cn('visual-search', panel)} onClick={preventDefault}>
         <div className="normal-content">
           <div className="header">
-            <h4>Add Image</h4>
+            <h4>Add an image</h4>
           </div>
           <div className="paste">
             <SVG alt="paste" src={PasteIcon} width={24} />
@@ -137,8 +137,8 @@ export function ChatImage({ children, uploadImage }: React.PropsWithChildren<Cha
                 id="sb_imgpst"
                 type="text"
                 name="image"
-                placeholder="Paste image URL"
-                aria-label="Paste image URL"
+                placeholder="Paste image or link"
+                aria-label="Paste image or link"
                 onPaste={onPaste}
                 onClickCapture={(e) => e.stopPropagation()}
               />
