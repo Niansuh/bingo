@@ -127,7 +127,7 @@ export function Settings() {
                     headerValue = atob(headerValue)
                   } catch (e) { }
                   if (!/^\s*curl ['"]https:\/\/(www|cn)\.bing\.com\/turing\/captcha\/challenge['"]/.test(headerValue)) {
-                    toast.error('用户信息格式不正确')
+                    toast.error('User information format is incorrect')
                     return
                   }
                   encodeHeadersToCookie(headerValue).forEach(cookie => setCookie(cookie))
