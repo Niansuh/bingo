@@ -8,7 +8,7 @@ const openai = new OpenAI({
 async function start() {
   const completion = await openai.chat.completions.create({
     messages: [
-      { role: 'user', content: '你好' },
+      { role: 'user', content: 'Hello' },
     ],
     model: 'bing',
     stream: true,
