@@ -121,13 +121,13 @@ export function ChatImage({ children, uploadImage }: React.PropsWithChildren<Cha
     }
   }, [panel])
 
-  return !enableGpt && !systemPrompts && (
+  return (
     <div className="visual-search-container">
       <div onClick={() => panel === 'none' ? setPanel('normal') : setPanel('none')}>{children}</div>
       <div className={cn('visual-search', panel)} onClick={preventDefault}>
         <div className="normal-content">
           <div className="header">
-            <h4>Add an image</h4>
+            <h4>Add Image</h4>
           </div>
           <div className="paste">
             <SVG alt="paste" src={PasteIcon} width={24} />
@@ -137,8 +137,8 @@ export function ChatImage({ children, uploadImage }: React.PropsWithChildren<Cha
                 id="sb_imgpst"
                 type="text"
                 name="image"
-                placeholder="Paste image or link"
-                aria-label="Paste image or link"
+                placeholder="Paste image URL"
+                aria-label="Paste image URL"
                 onPaste={onPaste}
                 onClickCapture={(e) => e.stopPropagation()}
               />
