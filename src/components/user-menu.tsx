@@ -83,7 +83,7 @@ export function UserMenu() {
           <DropdownMenuSeparator />
           <DropdownMenuItem asChild>
             <a
-              href="https://github.com/Niansuh/bingo/"
+              href="https://github.com/Niansuh/Bingo/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-between w-full gap-2 cursor-pointer"
@@ -96,7 +96,7 @@ export function UserMenu() {
           <DropdownMenuSeparator />
           <DropdownMenuItem asChild>
             <a
-              href="https://huggingface.co/login?next=%2Fspaces%2FNiansuh%2Fbingo%3Fduplicate%3Dtrue%26visibility%3Dpublic"
+              href="https://huggingface.co/login?next=%2Fspaces%2FNiansuhAI%2FBingo%3Fduplicate%3Dtrue%26visibility%3Dpublic"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-between w-full gap-2 cursor-pointer"
