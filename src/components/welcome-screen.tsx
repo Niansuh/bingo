@@ -11,7 +11,7 @@ const exampleMessages = [
   },
   {
     heading: '🎨 Get creative inspiration',
-    message: `Write a haiku in the voice of a pirate about a crocodile in outer space`
+    message: `Write a haiku in the voice of a pirate about a crocodile in outer space.`
   }
 ]
 
