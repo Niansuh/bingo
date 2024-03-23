@@ -58,26 +58,15 @@ export function Settings() {
           <DialogHeader>
             <DialogTitle>Set up your user information</DialogTitle>
             <DialogDescription>
-              Please use Edge browser
-              <ExternalLink
-                href="https://www.bing.com"
-              >
-                Open and sign in to Bing
-              </ExternalLink>
-              ，and then open it again
-              <ExternalLink href="https://www.bing.com/turing/captcha/challenge">Challenge interface</ExternalLink>
-              右键 》检查。打开开发者工具，在网络里面找到 Challenge 接口 》右键复制》复制为 cURL(bash)，粘贴到此处，然后保存。
+              Please use the Edge browser. Open and sign in to Bing at <ExternalLink href="https://www.bing.com">Bing</ExternalLink>, and then open the <ExternalLink href="https://www.bing.com/turing/captcha/challenge">Challenge interface</ExternalLink>. Right-click > Inspect. Open the developer tools, find the Challenge interface in the network, right-click and copy, copy it as cURL (bash), paste it here, and then save it.
               <div className="h-2" />
-              Graphic and text examples：
-              <ExternalLink href="https://github.com/weaigc/bingo#如何获取-bing_header">How to get BING_HEADER</ExternalLink>
+              See graphic and text examples at <ExternalLink href="https://github.com/weaigc/bingo#如何获取-bing_header">How to get BING_HEADER</ExternalLink>.
             </DialogDescription>
           </DialogHeader>
-          <div className="flex gap-4">
-
-          </div>
+          <div className="flex gap-4"></div>
           <Input
             value={curlValue}
-            placeholder="在此填写用户信息，格式: curl 'https://www.bing.com/turing/captcha/challenge' ..."
+            placeholder="Enter your user information here, format: curl 'https://www.bing.com/turing/captcha/challenge' ..."
             onChange={e => {
               setCurlValue(e.target.value)
             }}
