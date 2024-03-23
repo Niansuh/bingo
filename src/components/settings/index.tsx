@@ -66,7 +66,7 @@ export function Settings() {
               </ExternalLink>
               ，and then open it again
               <ExternalLink href="https://www.bing.com/turing/captcha/challenge">Challenge interface</ExternalLink>
-              To capture the Challenge interface: Right-click, choose "Inspect," find the Challenge interface, copy it as cURL (bash), then paste and save it here.
+              To capture the Challenge interface: Right-click, select "Inspect," locate the Challenge interface, copy it as cURL (bash), then paste and save it here.
               <div className="h-2" />
               Graphic and text examples：
               <ExternalLink href="https://github.com/weaigc/bingo#如何获取-bing_header">How to get BING_HEADER</ExternalLink>
