@@ -22,7 +22,7 @@ export function ToneSelector({ type, onChange }: ToneSelectorProps) {
   return (
     <div className="fieldset">
       <div className="legend">
-        Choose conversation style
+        Choose a conversation style
       </div>
       <div className="options-list-container">
         <ul id="tone-options" className="options">
