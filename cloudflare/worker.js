@@ -1,4 +1,4 @@
-const TARGET_HOST = 'niansuh-bingo.hf.space'
+const TARGET_HOST = 'niansuhai-bingo.hf.space'
 
 const handlers = {
   async fetch(request, env = {}) {
