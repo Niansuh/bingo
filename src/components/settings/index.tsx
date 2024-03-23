@@ -66,7 +66,7 @@ export function Settings() {
               </ExternalLink>
               ，and then open it again
               <ExternalLink href="https://www.bing.com/turing/captcha/challenge">Challenge interface</ExternalLink>
-              Right click >Inspect. Open the developer tools, find the Challenge interface in the network, right-click and copy, copy it as cURL (bash), paste it here, and save it.
+              Right-click > Inspect > Network tab. Find the Challenge interface, copy as cURL (bash), and paste here without showing orange in the code.
               <div className="h-2" />
               Graphic and text examples：
               <ExternalLink href="https://github.com/weaigc/bingo#如何获取-bing_header">How to get BING_HEADER</ExternalLink>
