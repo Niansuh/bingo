@@ -42,7 +42,7 @@ function getAction(error: ChatError, reset: () => void) {
     return (
       <div>
         The current topic has been suspended, please click
-        <a href={`#dialog="reset"`}>Restart</a>
+        <a href={`#dialog="reset"`}> Restart </a>
         Start a new conversation
       </div>
     )
