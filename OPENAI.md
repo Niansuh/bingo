@@ -1,4 +1,4 @@
-#BingoOpenAI
+# Bingo OpenAI
 
 In order to facilitate the integration of `new bing` into other `gpt`-like projects, the `API` interface in the `OpenAI` format is now open for everyone to call.
 
