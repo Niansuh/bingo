@@ -92,9 +92,9 @@ main();
 
 ## 在线演示
 
-1. https://huggingface.co/spaces/niansuhai/Bingo [![Deploy Chatbot UI](https://huggingface.co/datasets/huggingface/badges/resolve/main/duplicate-this-space-sm.svg)](https://huggingface.co/login?next=%2Fspaces%2Fniansuhai%2FBingo%3Fduplicate%3Dtrue%26visibility%3Dpublic)
+1. https://huggingface.co/spaces/niansuhai/Bingo [![Deploy Chatbot UI](https://huggingface.co/datasets/huggingface/badges/resolve/main/deploy-on-spaces-sm.svg)](https://huggingface.co/login?next=%2Fspaces%2Fniansuhai%2FBingo%3Fduplicate%3Dtrue%26visibility%3Dpublic)
 2. https://huggingface.co/spaces/niansuhai/copilot
-[![Deploy ChatGPT Next Web](https://huggingface.co/datasets/huggingface/badges/resolve/main/duplicate-this-space-sm.svg)](https://huggingface.co/login?next=%2Fspaces%2Fniansuhai%2Fcopilot%3Fduplicate%3Dtrue%26visibility%3Dpublic)
+[![Deploy Bing Copilot](https://huggingface.co/datasets/huggingface/badges/resolve/main/deploy-on-spaces-sm.svg)](https://huggingface.co/login?next=%2Fspaces%2Fniansuhai%2Fcopilot%3Fduplicate%3Dtrue%26visibility%3Dpublic)
 
 
 [![renderings](./docs/images/openai.png)](https://huggingface.co/spaces/niansuhai/Bingo)
